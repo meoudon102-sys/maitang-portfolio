@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tuyet Mai - Personal Website</title>
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Poppins", "Times New Roman", serif;
+      margin: 0;
+      background-color: #000;
+      color: #f5f5f5;
+      line-height: 1.7;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* ---------- HEADER ---------- */
+    header {
+      text-align: center;
+      background: #000;
+      padding: 80px 20px 60px;
+      color: #FFD54F;
+    }
+    header h1 {
+      font-size: 2.8em;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+    header p {
+      font-size: 1.1em;
+      color: #f1f1f1;
+    }
+    header img {
+      border-radius: 50%;
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      margin-top: 25px;
+      border: 4px solid #FFD54F;
+      box-shadow: 0 0 20px rgba(255, 213, 79, 0.4);
+      transition: transform 0.3s ease;
+    }
+    header img:hover { transform: scale(1.05); }
+
+    /* ---------- NAVIGATION ---------- */
+    nav {
+      background-color: #FFD54F;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 14px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 2px solid #FFD54F;
+    }
+    nav a {
+      color: black;
+      text-decoration: none;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      transition: color 0.3s, transform 0.2s;
+    }
+    nav a:hover {
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    /* ---------- SECTIONS ---------- */
+    section {
+      background-color: rgba(26, 26, 26, 0.95);
+      margin: 60px auto;
+      max-width: 900px;
+      border-radius: 12px;
+      padding: 50px 25px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.6);
+      position: relative;
+      z-index: 1;
+      backdrop-filter: blur(3px);
+    }
+    h2 {
+      color: #FFD54F;
+      border-left: 6px solid #FFD54F;
+      padding-left: 10px;
+      font-size: 1.8em;
+      margin-bottom: 20px;
+    }
+    p, li { color: #ddd; font-size: 1.05em; }
+
+    /* ---------- BACKGROUND INFO ---------- */
+    .background-info {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 15px;
+      padding: 20px;
+      background-color: #111;
+      border: 1px solid #FFD54F;
+      border-radius: 8px;
+    }
+    .background-info div {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.05em;
+    }
+    .label {
+      color: #FFD54F;
+      font-weight: 600;
+      width: 120px;
+    }
+    .value {
+      color: #f5f5f5;
+    }
+
+    /* ---------- NOTEBOOK ---------- */
+    #notebook {
+      border: 2px solid #FFD54F;
+    }
+    #notebook textarea {
+      width: 100%;
+      padding: 12px;
+      font-size: 1em;
+      border: 1px solid #FFD54F;
+      border-radius: 4px;
+      background-color: #1a1a1a;
+      color: #fff;
+      resize: vertical;
+      margin-top: 10px;
+    }
+    #notebook button {
+      margin-top: 12px;
+      background-color: #FFD54F;
+      color: #000;
+      padding: 10px 18px;
+      border: none;
+      border-radius: 4px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.25s;
+    }
+    #notebook button:hover { background-color: #ffeb3b; }
+    #notesList .note {
+      background-color: #222;
+      border-left: 4px solid #FFD54F;
+      padding: 10px 14px;
+      margin-top: 12px;
+      border-radius: 4px;
+      color: #fff;
+    }
+
+    /* ---------- CONTACT ---------- */
+    #contact input,
+    #contact textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 8px;
+      border: 1px solid #FFD54F;
+      border-radius: 4px;
+      font-size: 1em;
+      background-color: #1a1a1a;
+      color: #fff;
+    }
+    #contact label {
+      font-weight: 500;
+      margin-top: 15px;
+      display: block;
+      color: #FFD54F;
+    }
+    #contact button {
+      margin-top: 14px;
+      background-color: #FFD54F;
+      color: #000;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+    #contact button:hover { background-color: #ffeb3b; }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: #FFD54F;
+      font-size: 0.9em;
+      background-color: #000;
+      border-top: 2px solid #FFD54F;
+      margin-top: 80px;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 600px) {
+      header h1 { font-size: 2em; }
+      nav { flex-wrap: wrap; gap: 15px; }
+      section { margin: 40px 10px; padding: 35px 15px; }
+      .label { width: 100px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://uploads.onecompiler.io/4439q78th/4439nzpxt/IMG_7303.JPG" alt="Photo of Tuyet Mai">
+    <h1>TANG NGOC TUYET MAI</h1>
+    <p>Vietnam Studies Major - Fulbright University Vietnam</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#notebook">Notebook</a>
+    <a href="#contact">Your Message</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      Hello! I'm Tang Ngoc Tuyet Mai, a sophomore student majoring in Vietnam Studies at Fulbright University Vietnam.
+      I’m a student passionate about exploring investment, business, and organizing concert.
+      I believe knowledge and creativity are powerful tools for understanding our world.
+    </p>
+
+    <!-- 🎓 Background Section -->
+    <div class="background-info">
+      <div><span class="label">University:</span> <span class="value">Fulbright University Vietnam</span></div>
+      <div><span class="label">Major:</span> <span class="value">Vietnam Studies</span></div>
+      <div><span class="label">Email:</span> <span class="value">mai.tang.240061@student.fulbright.edu.vn</span></div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <h2>Portfolio</h2>
+    <ul>
+      <li><strong>Boom! Back To School 2025:</strong> Head of External Relations</li>
+          Took charge of seeking in-kind sponsorships for the concert. 
+          <ul></ul>Successfully identified potential partners, negotiated and drafted sponsorship contracts, and maintained communication throughout the collaboration. 
+          <ul></ul>Secured <strong>American Eye Center</strong> as a <strong>Silver Sponsor</strong> with a contribution valued at <strong>6 million VND</strong>, 
+      and facilitated their engagement with the Fulbright community.
+</li>
+      <li><strong>ÆTHER – Dance Showcase 2025:</strong> Head of Makeup and Clothing Department.</li>
+      Manage mainly in the clothing
+      <ul></ul>Create a moodboard for each performance, design items for dancers and contact the necessary services. 
+      <ul></ul>Recruiting and managing them to support dancers in clothing by training them, allocating tasks and ensuring the process is on-time. 
+      <ul></ul>Makeup a variety of creative layouts for dancers, both easy and challenging layouts. 
+</li>
+    </ul>
+  </section>
+
+  <section id="notebook">
+    <h2>My Notebook</h2>
+    <p>Reload the page will clear your notes.</p>
+    <textarea id="noteInput" rows="4" placeholder="Type something..."></textarea><br>
+    <button id="addNoteBtn">Add Note</button>
+    <div id="notesList"></div>
+  </section>
+
+  <section id="contact">
+    <h2>Your Message</h2>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" placeholder="Your name">
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" placeholder="your@email.com">
+
+      <label for="message">Message:</label>
+      <textarea id="message" rows="5" placeholder="Write something..."></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Mai Tang | Fulbright University Vietnam | Vietnam Studies</p>
+  </footer>
+
+  <script>
+    const addBtn = document.getElementById('addNoteBtn');
+    const input = document.getElementById('noteInput');
+    const notesList = document.getElementById('notesList');
+
+    addBtn.addEventListener('click', () => {
+      const noteText = input.value.trim();
+      if (noteText === '') {
+        alert('Please write something before adding a note!');
+        return;
+      }
+      const note = document.createElement('div');
+      note.className = 'note';
+      note.textContent = noteText;
+      notesList.appendChild(note);
+      input.value = '';
+    });
+  </script>
+
+</body>
+</html>
